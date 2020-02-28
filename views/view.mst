@@ -1,0 +1,16 @@
+{{> header}}
+
+
+<div class="container-V">
+    <h1>{{post.title}}</h1>
+
+    {{#post.photo}}
+        <img src="/media/{{post.photo}}" width="800" />
+    {{/post.photo}}
+
+    <article>{{post.body}}</article>
+    
+    <hr/>
+    
+    <small>Tags: {{post.tags}}</small>
+</div>

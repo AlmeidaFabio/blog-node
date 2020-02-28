@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    {{#pageTitle}}
+    <title>{{pageTitle}}</title>
+    {{/pageTitle}}
+
+    {{^pageTitle}}
+    <title>{{h.defaultPageTitle}}</title>
+    {{/pageTitle}}
+    <link rel="stylesheet" href="/assets/css/template.css">
+</head>
+<body>
+    <header>
+        <h1>Node + MongoDB</h1>
+
+        {{#user}}
+            Olá, <a href="/profile">{{user.username}}</a>!
+        {{/user}}
+        
+        <hr/>
+
+        <ul>
+            {{#h.menu}}
+                <li><a href="{{slug}}">{{name}}</a></li>
+            {{/h.menu}}    
+        </ul>
+    </header>
+    
+
+    {{#flashes}}
+        {{#success}}
+           <div class="warning">{{.}}</div> 
+        {{/success}}
+
+        {{#error}}
+           <div class="warning">{{.}}</div> 
+        {{/error}}
+        
+        {{#info}}
+           <div class="warning">{{.}}</div> 
+        {{/info}}
+    {{/flashes}}       
+</body>
+</html>
+

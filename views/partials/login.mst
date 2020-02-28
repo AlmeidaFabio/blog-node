@@ -1,0 +1,15 @@
+{{>header}}
+
+<div class="container-F">
+<h1>Login</h1>
+
+<form method="POST">
+    <label>Email:</label>
+    <input type="email" name="email"><br><br>
+    <label>Senha:</label>
+    <input type="password" name="password"><br><br>
+    <input type="submit" value="Entrar">
+</form>
+
+    <a href="/user/forget">Esqueci minha senha</a>
+</div>

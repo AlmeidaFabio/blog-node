@@ -1,0 +1,38 @@
+{{> header}}
+
+{{#flashes}}
+    {{#welcome}}
+        <h3>{{.}}</h3> 
+    {{/welcome}}
+{{/flashes}}    
+
+
+<div class="container">
+    {{#posts}}
+        <div class="post">
+            {{#photo}}
+            <img src="/media/{{photo}}" />
+            {{/photo}}
+
+            <h3><a href="/post/{{slug}}">{{title}}</a></h3>
+
+            <p>{{body}}</p>
+
+            <p>Autor: {{author.username}}</p>
+            
+            {{#user}}
+            <a href="/post/{{slug}}/edit">[ Editar ]</a>
+            {{/user}}
+        </div>
+    {{/posts}}   
+</div>
+
+<div class="tags">
+<p>Tags:</p>
+{{#tags}}
+    <div class="tag {{class}}"><a href="/?t={{_id}}">{{_id}} ({{count}})</a></div>
+{{/tags}}    
+</div>
+     
+
+

@@ -1,0 +1,26 @@
+{{> header}}
+
+<div class="container-F">
+    <h1>Cadastre-se aqui</h1>
+
+    <form method="POST">
+        <label for="">
+            Nome:
+            <input type="text" name="username">
+        </label>
+    <br><br>
+        <label for="">
+            Email:
+            <input type="email" name="email">
+        </label>
+    <br><br>
+        <label for="">
+            Senha:
+            <input type="password" name="password">
+        </label>
+    <br><br>
+        <label for="">
+            <input type="submit" value="Registrar">
+        </label>
+    </form>
+</div>

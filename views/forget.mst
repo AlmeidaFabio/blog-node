@@ -1,0 +1,13 @@
+{{>header}}
+
+<div class="container-F">
+<h1>Redefinir senha</h1>
+
+<form method="POST">
+    <label>Email:</label>
+    <input type="email" name="email"><br><br>
+    
+    <input type="submit" value="Redefinir senha">
+</form>
+
+</div>
